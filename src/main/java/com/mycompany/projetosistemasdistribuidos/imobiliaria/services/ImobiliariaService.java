@@ -1,6 +1,6 @@
 package com.mycompany.projetosistemasdistribuidos.imobiliaria.services;
 
-import com.mycompany.projetosistemasdistribuidos.imobiliaria.Operacao;
+import com.mycompany.projetosistemasdistribuidos.imobiliaria.controleConcorrencia.Operacao;
 import com.mycompany.projetosistemasdistribuidos.imobiliaria.models.Aluga;
 import com.mycompany.projetosistemasdistribuidos.imobiliaria.models.Cliente;
 import com.mycompany.projetosistemasdistribuidos.imobiliaria.models.Imovel;

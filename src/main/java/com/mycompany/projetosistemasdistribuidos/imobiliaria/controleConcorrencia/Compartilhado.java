@@ -1,4 +1,4 @@
-package com.mycompany.projetosistemasdistribuidos.imobiliaria;
+package com.mycompany.projetosistemasdistribuidos.imobiliaria.controleConcorrencia;
 
 import com.mycompany.projetosistemasdistribuidos.imobiliaria.models.Imovel;
 import java.util.ArrayList;
