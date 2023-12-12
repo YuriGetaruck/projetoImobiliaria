@@ -16,6 +16,7 @@ public class Usuario implements Runnable {
         this.operacoes = operacoes;
     }
 
+    @Override
     public void run() {
 
         x._2PL(operacoes, thrd);
