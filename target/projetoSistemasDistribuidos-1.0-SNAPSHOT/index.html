@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<head>
+    <title>Start Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>IMOBILIÁRIA DOIS IRMÃOS</h1>
+
+    <button onclick="redirecionar('http://localhost:8080/projetoSistemasDistribuidos/resources/imobiliaria/visitas')">Buscar Visitas</button>
+    <button onclick="redirecionar('http://localhost:8080/projetoSistemasDistribuidos/resources/imobiliaria/alugueis')">Buscar Aluguéis</button>
+    <button onclick="cadastrarCliente()">Cadastrar Cliente</button>
+    <button onclick="cadastrarImovel()">Cadastrar Imóvel</button>
+
+    <script>
+        function redirecionar(url) {
+            window.location.href = url;
+        }
+
+        function cadastrarCliente() {
+            var nomeCliente = prompt("Digite o nome do cliente:");
+            if (nomeCliente !== null && nomeCliente !== "") {
+                var url = 'http://localhost:8080/projetoSistemasDistribuidos/resources/imobiliaria/cadastrarCliente/' + encodeURIComponent(nomeCliente);
+                redirecionar(url);
+            }
+        }
+
+        function cadastrarImovel() {
+            var codigoImovel = prompt("Digite o código do imóvel:");
+            if (codigoImovel !== null && codigoImovel !== "") {
+                var url = 'http://localhost:8080/projetoSistemasDistribuidos/resources/imobiliaria/cadastrarImovel/' + encodeURIComponent(codigoImovel);
+                redirecionar(url);
+            }
+        }
+    </script>
+</body>
 </html>
